@@ -15,7 +15,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
 
             if(array.get(i) == true){
 
-                for(int j = 1; i < upperLimit; i *= 2){
+                for(int j = 1; i < upperLimit; i *= j){
 
                     array.set(j, false);
                 }
@@ -30,11 +30,12 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
 
     @Override
     public void printPrimes() {
-        boolean[] array = new boolean[];
 
+        for(int i = 0; i < array.size(); i++){
 
-
-
-        return false;
+            if(array.get(i) == true){
+                System.out.println(i);
+            }
+        }
     }
 }
